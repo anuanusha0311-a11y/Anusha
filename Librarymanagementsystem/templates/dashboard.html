@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="mb-4">📊 Dashboard</h1>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card text-white bg-primary shadow">
+            <div class="card-body text-center">
+                <h5>Total Books</h5>
+                <h1>{{ total_books }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success shadow">
+            <div class="card-body text-center">
+                <h5>Total Members</h5>
+                <h1>{{ total_members }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-danger shadow">
+            <div class="card-body text-center">
+                <h5>Issued Books</h5>
+                <h1>{{ issued_books }}</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">
+                Quick Links
+            </div>
+
+            <div class="card-body">
+                <a href="/books" class="btn btn-primary m-2">Books</a>
+                <a href="/add-book" class="btn btn-success m-2">Add Book</a>
+                <a href="/members" class="btn btn-warning m-2">Members</a>
+                <a href="/add-member" class="btn btn-info m-2">Add Member</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow">
+
+            <div class="card-header bg-secondary text-white">
+                Project Information
+            </div>
+
+            <div class="card-body">
+                <p>📚 Flask Library Management System</p>
+                <p>💾 SQLite Database</p>
+                <p>👨‍💻 Python + Flask + Bootstrap</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

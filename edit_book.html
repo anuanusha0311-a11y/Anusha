@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Edit Book</h1>
+
+<form method="POST">
+
+<label>Title</label><br>
+<input type="text" name="title" value="{{ book.title }}"><br><br>
+
+<label>Author</label><br>
+<input type="text" name="author" value="{{ book.author }}"><br><br>
+
+<label>Quantity</label><br>
+<input type="number" name="quantity" value="{{ book.quantity }}"><br><br>
+
+<button type="submit">Update Book</button>
+
+</form>
+
+{% endblock %}
